@@ -5,7 +5,15 @@
 	"url": "https://github.com/psychobunny/nodebb-plugin-topic-badges",
 	"library": "./library.js",
 	"hooks": [
-		{ "hook": "filter:scripts.get", "method": "addScripts", "callbacked": false }
+		{
+			"hook": "filter:scripts.get", "method": "addScripts", "callbacked": false
+		},
+		{
+			"hook": "filter:topic.thread_tools", "method": "addThreadTools", "callbacked": true
+		},
+		{
+			"hook": "action:app.load", "method": "init", "callbacked": false
+		}
 	],
 	"staticDir": "./public",
 	"css": [
