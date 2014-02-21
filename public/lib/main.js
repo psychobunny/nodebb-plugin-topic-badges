@@ -5,7 +5,8 @@
 		$('.category-item .topic-title').each(function() {
 			var el = $(this), match;
 
-			if (match = el.html().match(/^\[.+\]/)) {
+			if (el.html().match(/^\[.+\].+/)) {
+				match = el.html().match(/^\[.+\]/);
 				el.html(match[0]
 					.replace('[', '<div class="badge topic-badge pull-right">')
 					.replace(']', '</div>') + el.html().replace(match[0], ''));
