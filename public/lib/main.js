@@ -31,7 +31,7 @@
 			}
 
 			if (data.url.match(/^topic/)) {
-				$('.thread-tools .mark-solved').on('click', function() {
+				$('.thread-tools .mark-solved').on('click', function(ev) {
 					var title = badgifyTitle(templates.get('topic_name'), 'Solved');
 					socket.emit('admin.topics.renameTopic', {
 						tid: templates.get('topic_id'),
@@ -41,6 +41,9 @@
 							$('.topic-title').html(title);
 						}
 					});
+
+					ev.preventDefault();
+					return false;
 				});
 			}
 		});
