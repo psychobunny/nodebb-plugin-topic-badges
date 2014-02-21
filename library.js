@@ -9,7 +9,6 @@
 
     TopicBadges.init = function() {
     	SocketAdmin.topics.renameTopic = function(socket, data, callback) {
-    		console.log(data);
     		if (!data.tid || !data.title) {
     			return callback(false);
     		}
