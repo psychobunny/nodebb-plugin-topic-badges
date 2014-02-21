@@ -1,0 +1,14 @@
+{
+	"id": "nodebb-plugin-topic-badges",
+	"name": "NodeBB Topic Badges",
+	"description": "Allows users to label a topic with a badge by prefixing their title in square brackets.",
+	"url": "https://github.com/psychobunny/nodebb-plugin-topic-badges",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "filter:scripts.get", "method": "addScripts", "callbacked": false }
+	],
+	"staticDir": "./public",
+	"css": [
+		"css/main.css"
+	]
+}
