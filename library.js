@@ -8,6 +8,7 @@
         Topics = module.parent.require('./topics.js');
 
     TopicBadges.init = function() {
+    	SocketAdmin.topics = SocketAdmin.topics || {};
     	SocketAdmin.topics.renameTopic = function(socket, data, callback) {
     		if (!data.tid || !data.title) {
     			return callback(false);
