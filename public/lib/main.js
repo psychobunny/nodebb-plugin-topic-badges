@@ -32,9 +32,9 @@
 
 			if (data.url.match(/^topic/)) {
 				$('.thread-tools .mark-solved').on('click', function(ev) {
-					var title = badgifyTitle(templates.get('topic_name'), 'Solved');
+					var title = badgifyTitle(ajaxify.variables.get('topic_name'), 'Solved');
 					socket.emit('admin.topics.renameTopic', {
-						tid: templates.get('topic_id'),
+						tid: ajaxify.variables.get('topic_id'),
 						title: title
 					}, function(err) {
 						if (!err) {
