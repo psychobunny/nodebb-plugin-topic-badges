@@ -6,17 +6,19 @@
 	"library": "./library.js",
 	"hooks": [
 		{
-			"hook": "filter:scripts.get", "method": "addScripts", "callbacked": false
+			"hook": "filter:scripts.get", "method": "addScripts"
 		},
 		{
 			"hook": "filter:topic.thread_tools", "method": "addThreadTools", "callbacked": true
 		},
 		{
-			"hook": "action:app.load", "method": "init", "callbacked": false
+			"hook": "action:app.load", "method": "init"
 		}
 	],
-	"staticDir": "./public",
+	"staticDirs": {
+		"lib": "./public/lib"
+	},
 	"css": [
-		"css/main.css"
+		"public/css/main.css"
 	]
 }
