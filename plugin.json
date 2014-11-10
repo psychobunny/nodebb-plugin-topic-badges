@@ -9,7 +9,7 @@
 			"hook": "filter:scripts.get", "method": "addScripts"
 		},
 		{
-			"hook": "filter:topic.thread_tools", "method": "addThreadTools", "callbacked": true
+			"hook": "filter:topic.thread_tools", "method": "addThreadTools"
 		},
 		{
 			"hook": "static:app.load", "method": "init"
