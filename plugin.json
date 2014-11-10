@@ -12,7 +12,7 @@
 			"hook": "filter:topic.thread_tools", "method": "addThreadTools", "callbacked": true
 		},
 		{
-			"hook": "action:app.load", "method": "init"
+			"hook": "static:app.load", "method": "init"
 		}
 	],
 	"staticDirs": {

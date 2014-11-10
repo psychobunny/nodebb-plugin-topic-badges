@@ -7,7 +7,7 @@
 		Sockets = module.parent.require('./socket.io/index'),
 		Topics = module.parent.require('./topics.js');
 
-	TopicBadges.init = function() {
+	TopicBadges.init = function(params, callback) {
 		SocketAdmin.topics = SocketAdmin.topics || {};
 		SocketAdmin.topics.renameTopic = function(socket, data, callback) {
 			if (!data.tid || !data.title) {
@@ -16,6 +16,8 @@
 
 			Topics.setTopicField(data.tid, 'title', data.title, callback);
 		};
+
+		callback();
 	};
 
 	TopicBadges.addScripts = function(scripts, callback) {
