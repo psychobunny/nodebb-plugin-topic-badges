@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-topic-badges",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "NodeBB Topic Badges - Allows users to label a topic with a badge by prefixing their title in square brackets",
   "main": "library.js",
   "scripts": {
