@@ -25,14 +25,14 @@
 		callback(null, scripts);
 	};
 
-	TopicBadges.addThreadTools = function(threadTools, callback) {
-		threadTools.push({
+	TopicBadges.addThreadTools = function(data, callback) {
+		data.tools.push({
 			"title": "Mark <strong>Solved</strong>",
 			"class": "mark-solved",
 			"icon": "fa-check"
 		});
 
-		callback(null, threadTools);
+		callback(null, data);
 	};
 
 	module.exports = TopicBadges;
